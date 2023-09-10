@@ -18,5 +18,6 @@ router.post("/getUserInfo", ctrl.process.getUserInfo);
 router.post("/create/dashbord", ctrl.process.createDashbord);
 router.post("/read/dashbord", ctrl.process.readText);
 router.post("/read/dashbordLIst", ctrl.process.dashbordList);
+router.post("/delete/dashbord", ctrl.process.deleteDashbord);
 
 module.exports = router;

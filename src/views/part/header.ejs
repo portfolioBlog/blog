@@ -1,14 +1,8 @@
 <header>
-    <div class="logo">
+    <a href="/main" class="logo">
         portfolio blog
-    </div>
+    </a>
     <nav class="gnb">
-        <div class="search">
-            <button class="search_button">
-                <img src="./img/header/search_icon.svg" alt="search icon">
-            </button>
-            <input type="text" id="search">
-        </div>
         <div class="user">
             <img src="./img/header/user_icon.svg" alt="">
             <ul class="userInfo">
@@ -17,10 +11,7 @@
                         <%= userInfo.userName %>
                     </li>
                     <li>
-                        글쓰기
-                    </li>
-                    <li>
-                        마이페이지
+                        <a href="/dashbord">글쓰기</a>
                     </li>
                 <% } else { %>
                     <li>

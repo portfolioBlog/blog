@@ -34,7 +34,7 @@ const process = {
         if (req.session.user) {
             return next(); // 인증된 사용자일 경우 다음 미들웨어로 이동
         }
-        res.status(401).json({ message: '로그인이 필요합니다.' }); // 인증되지 않은 사용자 처리
+        res.status(401).render("home/error"); // 인증되지 않은 사용자 처리
     },
     register : async (req, res) => {
         const user = new User(req.body);
@@ -56,18 +56,29 @@ const process = {
         return res.json(response);
     },
     readText : (req, res) => {
-        if (req.session.responseDashbord.success) {
+        if (req.session.responseDashbord) {
             const response = {success : true};
-            return response;
+            return res.json(response);
         }
         const response = {success : false, msg : "해당 게시판은 존재하지 않습니다."};
-        return response;
+        return res.json(response);
     },
     dashbordList : async (req, res) => {
         const userInfo = req.session.user;
         const dashbord = new Dashbord();
         const dashbordList = await dashbord.list(userInfo.userId);
         return res.json(dashbordList);
+    },
+    deleteDashbord : async (req, res) => {
+        const dashbordInfo = req.body;
+        const userInfo = req.session.user;
+        if (dashbordInfo.writer === userInfo.userId ) {
+            const dashbord = new Dashbord();
+            const response = await dashbord.delete(dashbordInfo.title);
+            return res.json(response);
+        }
+        return res.json({success: false, msg: "작성자만 해당 게시물을 삭제 할 수 있습니다."});
+        
     }
 }
 

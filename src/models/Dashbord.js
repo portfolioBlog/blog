@@ -33,6 +33,14 @@ class Dashbord {
 
         }
     }
+    async delete(title) {
+        try {
+            const response = await DashbordStorage.deleteDashbord(title);
+            return response;
+        } catch (err) {
+
+        }
+    }
 };
 
 module.exports = Dashbord;

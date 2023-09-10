@@ -71,6 +71,12 @@ body {
     justify-content: center;
     padding: 10px;
 }
+.write_dashbord {
+    font-size: 24px;
+    font-family: 'LINESeedKR-Bd';
+    color: #477BFF;
+    text-decoration: underline;
+}
 
 @font-face {
     font-family: 'LINESeedKR-Rg';

@@ -43,6 +43,22 @@ class DashbordStorage {
                 })
         })
     }
+
+    static deleteDashbord(title) {
+        return new Promise((resolve, reject) => {
+            const query = "DELETE FROM dashbord WHERE title = ?;";
+            db.query(query, [title],
+                (err, data) => {
+                    if (err) reject(`${err}`);
+
+                    if (data !== undefined) {
+                        resolve({success: true});
+                    } else {
+                        resolve({success: false, msg: "게시물을 삭제하는데 실패하였습니다."});
+                    }
+                })
+        })
+    }
 };
 
 module.exports = DashbordStorage;
