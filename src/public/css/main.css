@@ -1,0 +1,86 @@
+body {
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 310px;
+    justify-content: center;
+}
+.content {
+    width: 1300px;
+    height: 100%;
+    min-height: calc(100vh - 80px);
+    background-color: #eee;
+    display: flex;
+    padding: 20px;
+    align-items: flex-start;
+}
+.dashbord_area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: auto;
+    justify-content: center;
+}
+.dashbords {
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    border: 1px solid #aaa;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.titles {
+    /* background-color: #ff0000; */
+    height: 70%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+
+    > .title {
+        font-family: 'LINESeedKR-Bd';
+        font-size: 32px;
+        margin-top: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 150px;
+        text-align: center;
+    }
+    > .subtitle {
+        font-family: 'LINESeedKR-Bd';
+        font-size: 22px;
+    }
+}
+.writer_date {
+    background-color: #eee;
+    height: 30%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+@font-face {
+    font-family: 'LINESeedKR-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/wizfile/font/LINESeedKR-Rg.eot');
+    src:url('https://cdn.jsdelivr.net/gh/wizfile/font/LINESeedKR-Rg.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}

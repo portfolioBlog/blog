@@ -1,0 +1,77 @@
+.container {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 0 310px;
+    justify-content: center;
+}
+.title_area {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 310px;
+    justify-content: center;
+}
+.titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > .title {
+        font-size: 42px;
+        font-family: 'LINESeedKR-Bd';
+    }
+    > .subtitle {
+        font-size: 32px;
+        font-family: 'LINESeedKR-Bd';
+    }
+}
+.writer_date {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    transform: translateY(10px);
+}
+.content {
+    width: 1300px;
+    height: 100%;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+}
+.delete {
+    padding: 10px 310px;
+    display: flex;
+    justify-content: end;
+}
+.del_btn {
+    font-size: 24px;
+    padding: 10px 15px;
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    font-family: 'LINESeedKR-Bd';
+    transition: .2s;
+    cursor: pointer;
+}
+.del_btn:hover {
+    background-color: red;
+}
+
+@font-face {
+    font-family: 'LINESeedKR-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/wizfile/font/LINESeedKR-Rg.eot');
+    src:url('https://cdn.jsdelivr.net/gh/wizfile/font/LINESeedKR-Rg.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}

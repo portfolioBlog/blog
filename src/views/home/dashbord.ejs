@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/summernote/summernote-lite.js"></script>
+    <script src="./js/summernote/lang/summernote-ko-KR.js"></script>
+    <link rel="stylesheet" href="./css/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/dashbord.css">
+</head>
+<body>
+    <%- include("../part/header") %>
+    <div class="container">
+        <div class="content">
+            <form id="dashbord_form">
+                <div class="grids">
+                    <input type="text" class="title" placeholder="제목을 입력해 주세요." name="title">
+                    <input type="text" class="subtitle" placeholder="부제목을 입력해 주세요." name="subtitle">
+                    <input type="text" class="category" placeholder="카테고리를 입력해 주세요." name="category">
+                    <div id="summernote" class="text"></div>
+                </div>
+                <div class="submit_flex">
+                    <button class="submit_button">게시하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/dashbord.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<header>
+    <div class="logo">
+        portfolio blog
+    </div>
+    <nav class="gnb">
+        <div class="search">
+            <button class="search_button">
+                <img src="./img/header/search_icon.svg" alt="search icon">
+            </button>
+            <input type="text" id="search">
+        </div>
+        <div class="user">
+            <img src="./img/header/user_icon.svg" alt="">
+            <ul class="userInfo">
+                <% if(userInfo) { %>
+                    <li>
+                        <%= userInfo.userName %>
+                    </li>
+                    <li>
+                        글쓰기
+                    </li>
+                    <li>
+                        마이페이지
+                    </li>
+                <% } else { %>
+                    <li>
+                        <a href="/login">로그인</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+</header>

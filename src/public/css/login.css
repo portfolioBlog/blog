@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'LINESeedKR-Rg';
+}
+.container {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 0 310px;
+    justify-content: center;
+}
+.content {
+    width: 1300px;
+    height: 620px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_register_box {
+    width: 630px;
+    height: 560px;
+    background-color: #F7F7F7;
+    padding: 15px 160px;
+}
+.login_register_menu {
+    width: 310px;
+    display: flex;
+    justify-content: space-between;
+}
+label input {
+    display: none;
+}
+label span {
+    font-family: 'LINESeedKR-Bd';
+    font-size: 32px;
+    color: #777;
+    position: relative;
+}
+label > input:checked + span {
+    color: #000;
+}
+label > input:checked + span::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #000;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+#login_form {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: center;
+}
+.l_id,
+.l_password,
+.r_id,
+.r_password,
+.r_check_password,
+.r_email {
+    display: flex;
+    flex-direction: column;
+}
+.l_id span,
+.l_password span,
+.r_id span,
+.r_password span,
+.r_check_password span,
+.r_email span {
+    font-family: 'LINESeedKR-Bd';
+    font-size: 20px;
+}
+.l_id input,
+.l_password input,
+.r_id input,
+.r_password input,
+.r_check_password input,
+.r_email input {
+    width: 310px;
+    height: 45px;
+    border-radius: 30px;
+    border: 0.7px solid #ccc;
+    font-size: 22px;
+    padding: 0 15px;
+}
+input:focus {
+    outline: none;
+}
+.login_button,
+.register_button {
+    width: 180px;
+    height: 50px;
+    background-color: #477BFF;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 35px;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'LINESeedKR-Bd';
+}
+.register_button {
+    font-size: 30px;
+}
+#register_form {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    display: none;
+}
+
+
+@font-face {
+    font-family: 'LINESeedKR-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/wizfile/font/LINESeedKR-Rg.eot');
+    src:url('https://cdn.jsdelivr.net/gh/wizfile/font/LINESeedKR-Rg.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+				

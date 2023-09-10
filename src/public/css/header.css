@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+    font-family: 'LINESeedKR-Rg';
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 310px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.logo {
+    font-family: 'LINESeedKR-Bd';
+    font-size: 32px;
+}
+.gnb {
+    width: 345px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search {
+    display: flex;
+    position: relative;
+}
+#search {
+    width: 275px;
+    height: 35px;
+    border: 1px solid #aaa;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 0 50px 0 15px;
+}
+#search:focus {
+    outline: none;
+}
+.search_button {
+    position: absolute;
+    right: 0;
+    height: 33px;
+    width: 50px;
+    border-radius: 0 50px 50px 0;
+    border: none;
+    transform: translate(-1px,1px);
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user {
+    transform: translateY(3px);
+    position: relative;
+}
+.user > img {
+    cursor: pointer;
+}
+.user:hover .userInfo{
+    display: block;
+}
+.userInfo {
+    position: absolute;
+    top: 100%;
+    transform: translate(-20%,-10px);
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 80px;
+    overflow: hidden;
+    display: none;
+}
+.userInfo li {
+    border-bottom: 1px solid #333;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+.userInfo li:nth-last-child(1) {
+    border: none;
+}
+@font-face {
+    font-family: 'LINESeedKR-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/wizfile/font/LINESeedKR-Rg.eot');
+    src:url('https://cdn.jsdelivr.net/gh/wizfile/font/LINESeedKR-Rg.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}

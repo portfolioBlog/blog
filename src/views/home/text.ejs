@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/text.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            portfolio blog
+        </div>
+        <nav class="gnb">
+            <div class="search">
+                <button class="search_button">
+                    <img src="../../img/header/search_icon.svg" alt="search icon">
+                </button>
+                <input type="text" id="search">
+            </div>
+            <div class="user">
+                <img src="../../img/header/user_icon.svg" alt="">
+                <ul class="userInfo">
+                    <% if(userInfo) { %>
+                        <li>
+                            <%= userInfo.userName %>
+                        </li>
+                        <li>
+                            글쓰기
+                        </li>
+                        <li>
+                            마이페이지
+                        </li>
+                    <% } else { %>
+                        <li>
+                            <a href="/login">로그인</a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="title_area">
+        <div class="titles">
+            <p class="title">
+                <%= responseDashbord.title %>
+            </p>
+            <p class="subtitle">
+                <%= responseDashbord.subtitle %>
+            </p>
+        </div>
+        <div class="writer_date">
+            <p class="writer">
+                <%= responseDashbord.writer %>
+            </p>
+            <p class="date">
+                123.34.34
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <%- responseDashbord.text %>
+        </div>
+    </div>
+    <div class="delete">
+        <button class="del_btn">
+            게시물 삭제하기
+        </button>
+    </div>
+    <script src="../../js/mainText.js"></script>
+</body>
+</html>
